@@ -40,4 +40,17 @@ def update_data():
     resp = requests.put(url=URL, data=json_data)
     data = resp.json()
     print(data)
-update_data()
+# update_data()
+
+# delete method
+
+def delete_data():
+    data = {
+        'id':4,
+    }
+    json_data = json.dumps(data)
+    resp = requests.delete(url=URL, data=json_data)
+    data = resp.json()
+    print(data)
+
+delete_data()
